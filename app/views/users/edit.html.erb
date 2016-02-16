@@ -1,0 +1,19 @@
+<form action='/users/<%= @user.id %>' method='post'>
+	<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+	<input type='hidden' name='_method' value='patch'>
+	<label for='update[email]'>Update Email</label>
+	<input id='update[email]' type='text' name='update[email]' value='<%=@user.email%>'>
+	<label for='update[name]'>Update Name</label>
+	<input id='update[name]' type='text' name='update[name]' value='<%=@user.name%>'>
+	<label for='update[password]'>Update Password</label>
+	<input id='update[password]' type='text' name='update[password]'>
+	<label>Confirm Password</label>
+	<input type='text' name='password_confirmation'>
+	<input type='submit' value='Update'> 
+</form>
+
+<form action='/users/<%= @user.id %>' method='post'>
+	<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+	<input type='hidden' name='_method' value='delete'>
+	<input type='submit' value='Delete Account'>
+</form>
